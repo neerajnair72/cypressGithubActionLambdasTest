@@ -4,12 +4,20 @@ const validate = require("./utils/validate")
 const constants = require("./utils/constants.js")
 const batcher = require("./utils/batch/batcher.js")
 const fs = require("fs")
+var colors = require('colors');
+colors.setTheme({
+  info: 'white',
+  help: 'magenta',
+  warn: 'yellow',
+  success: 'green',
+  error: 'red'
+});
 const batch_runner = require("./utils/batch/batch_runner.js")
 var lambdaTunnel = require('@lambdatest/node-tunnel');
 
 module.exports = function (args) {
     if (!("lambdatest-config-file" in args)) {
-        console.log("Checking Lambda Config in current directory")
+        console.log("Checking Lambda Config in current directory".info);
         if (fs.existsSync(constants.LAMBDA_CONFIG)) {
             args["lambdatest-config-file"] = constants.LAMBDA_CONFIG
         }

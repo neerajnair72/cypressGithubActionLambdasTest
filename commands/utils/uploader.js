@@ -73,7 +73,7 @@ function upload_zip(lt_config, file_name,prefix="project", env = "prod") {
                             reject("error", responseData);
                         }
                     } else {
-                        console.log(`Uploaded `+prefix+` file successfully`);
+                        console.log(`Uploaded ${prefix} file successfully`.help);
                         resolve(responseDataURL);
                     }
                 }

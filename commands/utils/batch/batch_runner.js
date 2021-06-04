@@ -50,8 +50,8 @@ function run_test(payload, env = "prod") {
             reject("Some Error occured on Lambdatest Server");
           } else {
             console.log(
-              `Uploaded tests successfully `,
-              responseData["value"]["message"]
+              `Uploaded tests successfully `.help,
+              responseData["value"]["message"].success
             );
             resolve(session_id);
           }
@@ -63,7 +63,7 @@ function run_test(payload, env = "prod") {
 
 async function run(lt_config, batches, env, i = 0) {
   totalBatches = batches.length;
-  console.log("Total number of batches " + totalBatches);
+  console.log(`Total number of batches ${totalBatches}`.info);
   return new Promise(function (resolve, reject) {
     //archive the project i.e the current working directory
     archive
