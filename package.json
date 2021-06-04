@@ -19,10 +19,12 @@
   "dependencies": {
     "@lambdatest/node-tunnel": "^3.0.0",
     "archiver": "^5.1.0",
+    "colors": "^1.4.0",
     "glob": "^7.1.6",
     "request": "^2.88.2",
     "ws": "^7.4.3",
-    "yargs": "^16.1.0"
+    "yargs": "^16.1.0",
+    "colors": "1.4.0"
   },
   "license": "MIT",
   "preferGlobal": true,
